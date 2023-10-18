@@ -41,6 +41,6 @@ spec:
   selector:
     app: springboot-k8s-mysql
   ports:
-      port: 8080 # The port that the service is running on in the cluster
+      port: 80 # The port that the service is running on in the cluster
       targetPort: 80 # The port exposed by the service
-  Nodeport: 30001 # type of the service.
+  nodeport: 30001 # type of the service.

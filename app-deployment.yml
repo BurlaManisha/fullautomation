@@ -37,10 +37,10 @@ kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
   name: springboot-bank-svc
 spec:
+ type: NodePort
   selector:
     app: springboot-k8s-mysql
   ports:
-    - protocol: "TCP"
       port: 8080 # The port that the service is running on in the cluster
-      NodePort: 30001 # The port exposed by the service
-  type: NodePort # type of the service.
+      targetPort: 80 # The port exposed by the service
+  Nodeport: 30001 # type of the service.
